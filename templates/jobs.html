@@ -1,0 +1,152 @@
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Jobs</title>
+</head>
+<body>
+
+<h2>Available Jobs</h2>
+
+{% for job in jobs %}
+<div>
+
+    <h3>{{ job[1] }}</h3>
+    <p>Company: {{ job[2] }}</p>
+    <p>Location: {{ job[3] }}</p>
+
+    <a href="/apply/{{ job[0] }}">Apply</a>
+
+    DELETE BUTTON -->
+    <!-- <a href="/deletejob/{{ job[0] }}"
+       onclick="return confirm('Are you sure you want to delete this job?')"
+       style="color:white;background:red;padding:5px 10px;text-decoration:none;">
+       Delete
+    </a>
+
+    <hr>
+
+</div>
+{% endfor %}
+
+<a href="/addjob">Add Job</a>
+<a href="/export_excel">Download Excel Report</a>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jobs</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f2f2f2;
+margin:0;
+padding:40px;
+}
+
+h2{
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.job{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.job h3{
+margin:0;
+color:#333;
+}
+
+.job p{
+margin:5px 0;
+color:#666;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:8px 15px;
+text-decoration:none;
+color:white;
+border-radius:5px;
+font-size:14px;
+}
+
+.apply{
+background:green;
+}
+
+.delete{
+background:red;
+}
+
+.top-buttons{
+text-align:center;
+margin-bottom:20px;
+}
+
+.top-buttons a{
+background:#667eea;
+padding:10px 20px;
+color:white;
+text-decoration:none;
+border-radius:6px;
+margin:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Available Jobs</h2>
+<form method="GET" action="/jobs">
+    <input type="text" name="search" placeholder="Search Job">
+    <button type="submit">Search</button>
+</form>
+
+<div class="top-buttons">
+<a href="/addjob">Add Job</a>
+<a href="/export_excel">Download Excel</a>
+</div>
+
+<div class="container">
+
+{% for job in jobs %}
+
+<div class="job">
+
+<h3>{{ job[1] }}</h3>
+<p><b>Company:</b> {{ job[2] }}</p>
+<p><b>Location:</b> {{ job[3] }}</p>
+
+<a href="/apply/{{ job[0] }}" class="btn apply">Apply</a>
+
+<a href="/deletejob/{{ job[0] }}"
+class="btn delete"
+onclick="return confirm('Delete this job?')">
+Delete
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>

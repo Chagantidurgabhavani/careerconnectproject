@@ -1,0 +1,244 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Add Job</title>
+</head>
+<body>
+<h2>Add Job</h2>
+
+<form method="POST">
+    Title: <input type="text" name="title"><br><br>
+    Company: <input type="text" name="company"><br><br>
+    Location: <input type="text" name="location"><br><br>
+    <button type="submit">Add Job</button>
+</form>
+
+</body>
+</html> --> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Add Job</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #5a67d8;
+            transform: scale(1.05);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Add Job</h2>
+
+    <form method="POST">
+        <input type="text" name="title" placeholder="Job Title" required>
+        <input type="text" name="company" placeholder="Company Name" required>
+        <input type="text" name="location" placeholder="Job Location" required>
+        <button type="submit">Add Job</button>
+    </form>
+
+    <a href="/jobs" class="back-link">← Back to Jobs</a>
+</div>
+
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>Jobs</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+padding:40px;
+}
+
+.job{
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:10px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn{
+padding:8px 15px;
+text-decoration:none;
+color:white;
+border-radius:5px;
+}
+
+.apply{
+background:green;
+}
+
+.delete{
+background:red;
+}
+
+.add{
+background:#667eea;
+padding:10px 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Available Jobs</h2>
+
+<a href="/addjob" class="btn add">Add New Job</a>
+
+{% for job in jobs %}
+
+<div class="job">
+
+<h3>{{ job[1] }}</h3>
+<p>Company : {{ job[2] }}</p>
+<p>Location : {{ job[3] }}</p>
+
+<a href="/apply/{{ job[0] }}" class="btn apply">Apply</a>
+
+<a href="/deletejob/{{ job[0] }}" 
+class="btn delete"
+onclick="return confirm('Delete this job?')">
+Delete
+</a>
+
+</div>
+
+{% endfor %}
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Job</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Segoe UI;
+            background:linear-gradient(135deg,#667eea,#764ba2);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .form-container{
+            background:white;
+            padding:40px;
+            width:400px;
+            border-radius:15px;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#667eea;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+<h2>Add Job</h2>
+
+<form method="POST">
+
+<input type="text" name="title" placeholder="Job Title" required>
+
+<input type="text" name="company" placeholder="Company Name" required>
+
+<input type="text" name="location" placeholder="Location" required>
+
+<button type="submit">Add Job</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

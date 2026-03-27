@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>CareerConnect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to CareerConnect</h1>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <a href="/jobs">View Jobs</a>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CareerConnect</title>
+    <style>
+        /* Background Image */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Glass Container */
+        .home-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 50px;
+            width: 450px;
+            border-radius: 15px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: block;
+            margin: 12px 0;
+            padding: 12px;
+            background: #ff4b2b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff416c;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="home-box">
+    <h1>Welcome to CareerConnect</h1>
+    <p>Your gateway to amazing career opportunities 🚀</p>
+
+    <a href="/register" class="btn">Register</a>
+    <a href="/login" class="btn">Login</a>
+    <a href="/jobs" class="btn">View Jobs</a>
+</div>
+
+</body>
+</html>

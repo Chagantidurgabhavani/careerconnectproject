@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h2>Welcome {{ name }}</h2>
+
+<a href="/jobs">View Jobs</a>
+<a href="/logout">Logout</a>
+
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') no-repeat center center/cover;
+            height: 100vh;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1cc88a;
+        }
+
+        /* Welcome Card */
+        .dashboard-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            width: 400px;
+        }
+
+        .card h2 {
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 25px;
+            background: #4e73df;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #2e59d9;
+            transform: scale(1.05);
+        }
+
+        .logout {
+            background: #e74a3b;
+        }
+
+        .logout:hover {
+            background: #c0392b;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h1>Job Portal</h1>
+    <div class="nav-links">
+        <a href="/jobs">View Jobs</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="dashboard-container">
+    <div class="card">
+        <h2>Welcome {{ name }}</h2>
+        <a href="/jobs" class="btn">View Jobs</a>
+        <a href="/logout" class="btn logout">Logout</a>
+        <a href="/interview?role=Python Developer">Practice Python Interview</a>
+    
+    </div>
+</div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+</head>
+
+<body>
+
+<h1>Welcome {{name}}</h1>
+
+<hr>
+
+<h2>CareerConnect Dashboard</h2>
+
+<a href="/jobs">View Jobs</a><br><br>
+<a href="/addjob">Add Job</a><br><br>
+<a href="/analytics">Job Analytics</a><br><br>
+<a href="/export_excel">Download Applications Excel</a><br><br>
+
+<hr>
+
+<h2>Mock Interview</h2>
+
+<a href="/interview?role=Python Developer">
+<button>Start Python Interview</button>
+</a>
+
+<br><br>
+
+<a href="/interview?role=Data Analyst">
+<button>Start Data Analyst Interview</button>
+</a>
+
+<br><br>
+
+<a href="/logout">
+<button>Logout</button>
+</a>
+
+</body>
+</html>
